@@ -6,8 +6,11 @@ import HomeCard from './HomeCard';
 export default class HomeList extends React.Component {
   render() {
       const cards = this.props.homes.map((home, i) => <HomeCard home={home} onAddToCart={this.props.onAddToCart} key={i} />);
-      return <div className="flex-container">
-          {cards}
+      return <div>
+        <h3>Available Homes</h3>
+        <div className="flex-container">
+            {cards}
+        </div>
       </div>
   }
 }

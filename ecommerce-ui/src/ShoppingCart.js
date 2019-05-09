@@ -6,8 +6,12 @@ import CartItem from './CartItem';
 export default class ShoppingCart extends React.Component {
   render() {
     const cards = this.props.selectedHomes.map((home, i) => <CartItem home={home} onRemoveItem={this.props.onRemoveItem} idx={i} key={i} />);
-    return <div className="flex-container-vertical">
-        {cards}
+    return <div className={cards.length > 0 ? '' : 'hidden'}>
+        <h3>Shopping Cart</h3>
+        <div className="flex-container-vertical">
+            {cards}
+        </div>
+        <hr />
     </div>
   }
 }

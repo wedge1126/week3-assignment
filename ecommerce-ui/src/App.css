@@ -112,3 +112,7 @@
 .cart-item-button:active {
   background-color: rgb(223, 60, 71);
 }
+
+.hidden {
+  display: none;
+}

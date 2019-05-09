@@ -37,10 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h3>Shopping Cart</h3>
         <ShoppingCart selectedHomes={this.state.selectedHomes} onRemoveItem={this.removeCartItem} />
-        <hr />
-        <h3>Available Homes</h3>
         <HomeList homes={homes} onAddToCart={this.addToCart} />
       </div>
     );
