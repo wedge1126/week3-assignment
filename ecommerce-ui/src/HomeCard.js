@@ -5,7 +5,7 @@ import Rating from './Rating';
 
 export default class HomeCard extends React.Component {
   render() {
-    const { home, onAddToCart } = this.props;
+    const { home, active, onAddToCart } = this.props;
     const currencyFormat = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -30,7 +30,7 @@ export default class HomeCard extends React.Component {
                 <span className="superhost">{home.host.isSuperhost ? 'Superhost' : ''}</span>
             </div>
             <div>
-                <button className="home-card-button" onClick={() => onAddToCart(home)} >Book</button>
+                <button className="home-card-button" disabled={!active} onClick={() => onAddToCart(home)} >Book</button>
             </div>
         </div>
     </div>
@@ -59,5 +59,6 @@ HomeCard.propTypes = {
             reviews: PropTypes.number.isRequired
         })
     }).isRequired,
+    active: PropTypes.bool.isRequired,
     onAddToCart: PropTypes.func.isRequired
 }

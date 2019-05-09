@@ -20,6 +20,11 @@ class App extends React.Component {
   }
 
   addToCart = (home) => {
+    if(this.state.selectedHomes.includes(home)) {
+      alert('You already selected that home');
+      return;
+    }
+
     this.setState((prevState) => ({
         selectedHomes: [...prevState.selectedHomes, home]
     }));
@@ -38,7 +43,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ShoppingCart selectedHomes={this.state.selectedHomes} onRemoveItem={this.removeCartItem} />
-        <HomeList homes={homes} onAddToCart={this.addToCart} />
+        <HomeList homes={homes} selectedHomes={this.state.selectedHomes} onAddToCart={this.addToCart} />
       </div>
     );
   }
