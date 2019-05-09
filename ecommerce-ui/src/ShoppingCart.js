@@ -5,11 +5,23 @@ import CartItem from './CartItem';
 
 export default class ShoppingCart extends React.Component {
   render() {
-    const cards = this.props.selectedHomes.map((home, i) => <CartItem home={home} onRemoveItem={this.props.onRemoveItem} idx={i} key={i} />);
+    const { selectedHomes, onRemoveItem } = this.props;
+    const cards = selectedHomes.map((home, i) => <CartItem home={home} onRemoveItem={onRemoveItem} idx={i} key={i} />);
+    const total = selectedHomes.reduce((total, home) => total + home.payment.cost, 0);
+    const currencyFormat = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
     return <div className={cards.length > 0 ? '' : 'hidden'}>
         <h3>Shopping Cart</h3>
         <div className="flex-container-vertical">
             {cards}
+        </div>
+        <div className="shopping-cart-total">
+            <div>Total</div>
+            <div>{currencyFormat.format(total)}</div>
         </div>
         <hr />
     </div>
