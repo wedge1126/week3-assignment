@@ -49,5 +49,6 @@ ShoppingCart.propTypes = {
             stars: PropTypes.number.isRequired,
             reviews: PropTypes.number.isRequired
         })
-    })).isRequired
+    })).isRequired,
+    onRemoveItem: PropTypes.func.isRequired
 }
