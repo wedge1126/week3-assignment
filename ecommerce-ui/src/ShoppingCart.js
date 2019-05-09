@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HomeCard from './HomeCard';
+import CartItem from './CartItem';
 
-export default class HomeList extends React.Component {
+export default class ShoppingCart extends React.Component {
   render() {
-      const cards = this.props.homes.map((home, i) => <HomeCard home={home} onAddToCart={this.props.onAddToCart} key={i} />);
-      return <div className="flex-container">
-          {cards}
-      </div>
+    const cards = this.props.selectedHomes.map((home, i) => <CartItem home={home} onRemoveItem={this.props.onRemoveItem} idx={i} key={i} />);
+    return <div className="flex-container-vertical">
+        {cards}
+    </div>
   }
 }
 
-HomeList.propTypes = {
-    homes: PropTypes.arrayOf(PropTypes.shape({
+ShoppingCart.propTypes = {
+    selectedHomes: PropTypes.arrayOf(PropTypes.shape({
         title: PropTypes.string.isRequired,
         houseType: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
@@ -33,6 +33,5 @@ HomeList.propTypes = {
             stars: PropTypes.number.isRequired,
             reviews: PropTypes.number.isRequired
         })
-    })),
-    onAddToCart: PropTypes.func.isRequired
+    })).isRequired
 }

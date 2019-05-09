@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Rating from './Rating';
-
-export default class HomeCard extends React.Component {
+export default class CartItem extends React.Component {
   render() {
-    const { home, onAddToCart } = this.props;
+    const { home, onRemoveItem, idx } = this.props;
     const currencyFormat = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -13,31 +11,24 @@ export default class HomeCard extends React.Component {
         maximumFractionDigits: 0
     });
 
-    return <div className="home-card">
-        <img className="home-card-image" src={home.image} alt={home.title} />
-        <div className="home-card-body">
-            <div className="home-card-type">
+    return <div className="cart-item">
+        <div className="cart-item-body">
+            <div className="cart-item-type">
                 <span>{home.houseType}</span> &#8226; <span>{home.location.city}, {home.location.country}</span>
             </div>
-            <div className="home-card-title">{home.title}</div>
-            <div>
-                <span className="home-card-cost">{currencyFormat.format(home.payment.cost)}/night</span>
-                <span>{home.payment.description}</span>
-            </div>
-            <Rating value={home.rating} />
-            <div>
-                <span className="host-name">{home.host.name}</span>
-                <span className="superhost">{home.host.isSuperhost ? 'Superhost' : ''}</span>
+            <div className="cart-item-cost">
+                {currencyFormat.format(home.payment.cost)}/night
             </div>
             <div>
-                <button className="home-card-button" onClick={() => onAddToCart(home)} >Book</button>
+                <span className="cart-item-title">{home.title}</span>
+                <button className="cart-item-button" onClick={() => onRemoveItem(idx)} >Remove</button>
             </div>
         </div>
     </div>
   }
 }
 
-HomeCard.propTypes = {
+CartItem.propTypes = {
     home: PropTypes.shape({
         title: PropTypes.string.isRequired,
         houseType: PropTypes.string.isRequired,
@@ -59,5 +50,6 @@ HomeCard.propTypes = {
             reviews: PropTypes.number.isRequired
         })
     }).isRequired,
-    onAddToCart: PropTypes.func.isRequired
+    onRemoveItem: PropTypes.func.isRequired,
+    idx: PropTypes.number.isRequired
 }
