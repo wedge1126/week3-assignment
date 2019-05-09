@@ -61,5 +61,27 @@
             "stars": 5,
             "reviews": 83
         }
+    },
+    {
+        "title": "Quaint 31,400 km³ home above lovely forest",
+        "houseType": "Entire Space Station",
+        "image": "http://www.islandbreath.org/2015Year/02/150205deathstar.jpg",
+        "location": {
+            "city": "Endor",
+            "country": "Endor System"
+        },
+        "payment": {
+            "cost": 3200000000,
+            "description": ""
+        },
+        "host": {
+            "name": "Sheev",
+            "isSuperhost": true
+        },
+        "rating": {
+            "stars": 3.2,
+            "reviews": 501
+        }
     }
+    
 ]
