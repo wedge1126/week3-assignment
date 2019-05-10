@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeCard should render the test data correctly 1`] = `
+<div
+  className="home-card"
+>
+  <img
+    alt="Quaint 31,400 km³ home above lovely forest"
+    className="home-card-image"
+    src="http://www.islandbreath.org/2015Year/02/150205deathstar.jpg"
+  />
+  <div
+    className="home-card-body"
+  >
+    <div
+      className="home-card-type"
+    >
+      <span>
+        Entire Space Station
+      </span>
+       • 
+      <span>
+        Endor
+        , 
+        Endor System
+      </span>
+    </div>
+    <div
+      className="home-card-title"
+    >
+      Quaint 31,400 km³ home above lovely forest
+    </div>
+    <div>
+      <span
+        className="home-card-cost"
+      >
+        $3,200,000,000
+        /night
+      </span>
+      <span />
+    </div>
+    <HomeCard
+      value={
+        Object {
+          "reviews": 501,
+          "stars": 3.2,
+        }
+      }
+    />
+    <div>
+      <span
+        className="host-name"
+      >
+        Sheev
+      </span>
+      <span
+        className="superhost"
+      >
+        Superhost
+      </span>
+    </div>
+    <div>
+      <button
+        className="home-card-button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Book
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem should render the test data correctly 1`] = `
+<div
+  className="cart-item"
+>
+  <div
+    className="cart-item-body"
+  >
+    <div
+      className="cart-item-type"
+    >
+      <span>
+        Entire Space Station
+      </span>
+       • 
+      <span>
+        Endor
+        , 
+        Endor System
+      </span>
+    </div>
+    <div
+      className="cart-item-cost"
+    >
+      $3,200,000,000
+      /night
+    </div>
+    <div>
+      <span
+        className="cart-item-title"
+      >
+        Quaint 31,400 km³ home above lovely forest
+      </span>
+      <button
+        className="cart-item-button"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
+`;

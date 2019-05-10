@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingCart should render the test data correctly 1`] = `
+<div
+  className=""
+>
+  <h3>
+    Shopping Cart
+  </h3>
+  <div
+    className="flex-container-vertical"
+  >
+    <CartItem
+      home={
+        Object {
+          "host": Object {
+            "isSuperhost": true,
+            "name": "Robert",
+          },
+          "houseType": "Apartment",
+          "image": "https://images.unsplash.com/photo-1490806230066-f7e6f7bf5052?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ca889535ea01f912f94ac4ddf0034e0&auto=format&fit=crop&w=500&q=80",
+          "location": Object {
+            "city": "New York",
+            "country": "USA",
+          },
+          "payment": Object {
+            "cost": 105,
+            "description": "Free cancellation",
+          },
+          "rating": Object {
+            "reviews": 133,
+            "stars": 3,
+          },
+          "title": "Centrally-located Manhattan studio",
+        }
+      }
+      idx={0}
+      key="0"
+      onRemoveItem={[MockFunction]}
+    />
+    <CartItem
+      home={
+        Object {
+          "host": Object {
+            "isSuperhost": true,
+            "name": "Jamie",
+          },
+          "houseType": "Apartment",
+          "image": "https://images.unsplash.com/photo-1519424187720-db6d0fc5a5d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19f783ae564d7c6da4777cde1a84c1c9&auto=format&fit=crop&w=500&q=80",
+          "location": Object {
+            "city": "Denver",
+            "country": "USA",
+          },
+          "payment": Object {
+            "cost": 130,
+            "description": "",
+          },
+          "rating": Object {
+            "reviews": 381,
+            "stars": 4.5,
+          },
+          "title": "Denver apartment outside Union Station",
+        }
+      }
+      idx={1}
+      key="1"
+      onRemoveItem={[MockFunction]}
+    />
+    <CartItem
+      home={
+        Object {
+          "host": Object {
+            "isSuperhost": false,
+            "name": "Olivia",
+          },
+          "houseType": "Entire House",
+          "image": "https://images.unsplash.com/photo-1495136568018-11a54caad6b5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b4d19de84a578b1175e85e0811f41c97&auto=format&fit=crop&w=500&q=80",
+          "location": Object {
+            "city": "Stockholm",
+            "country": "Sweden",
+          },
+          "payment": Object {
+            "cost": 230,
+            "description": "Free cancellation",
+          },
+          "rating": Object {
+            "reviews": 83,
+            "stars": 5,
+          },
+          "title": "Quaint 3-bedroom home in Gamla stan",
+        }
+      }
+      idx={2}
+      key="2"
+      onRemoveItem={[MockFunction]}
+    />
+    <CartItem
+      home={
+        Object {
+          "host": Object {
+            "isSuperhost": true,
+            "name": "Sheev",
+          },
+          "houseType": "Entire Space Station",
+          "image": "http://www.islandbreath.org/2015Year/02/150205deathstar.jpg",
+          "location": Object {
+            "city": "Endor",
+            "country": "Endor System",
+          },
+          "payment": Object {
+            "cost": 3200000000,
+            "description": "",
+          },
+          "rating": Object {
+            "reviews": 501,
+            "stars": 3.2,
+          },
+          "title": "Quaint 31,400 km³ home above lovely forest",
+        }
+      }
+      idx={3}
+      key="3"
+      onRemoveItem={[MockFunction]}
+    />
+  </div>
+  <div
+    className="shopping-cart-total"
+  >
+    <div>
+      Total
+    </div>
+    <div>
+      $3,200,000,465
+    </div>
+  </div>
+  <hr />
+</div>
+`;
